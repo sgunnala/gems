@@ -1,0 +1,5 @@
+## Idea folder
+.idea/*
+*.iws
+*.iml
+/out/

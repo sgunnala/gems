@@ -1,0 +1,114 @@
+#Gems Property File
+#Fri May 13 11:04:33 BST 2005
+
+# Server connections configuration file:
+ServerConfigFile=servers.xml
+
+# Set UIManager Look and Feel class name (default: javax.swing.plaf.metal.MetalLookAndFeel)
+# JGoodies L&F library is shipped with Gems in the lib directoy.
+# JGoodies theme may be customized on command line, see rungems.bat
+# LookAndFeel=com.jgoodies.looks.plastic.PlasticXPLookAndFeel
+
+LookAndFeel=javax.swing.plaf.nimbus.NimbusLookAndFeel
+
+# Other JGoodies L&F options:
+#LookAndFeel=com.jgoodies.looks.plastic.Plastic3DLookAndFeel
+#LookAndFeel=com.jgoodies.looks.plastic.PlasticLookAndFeel
+#LookAndFeel=com.jgoodies.looks.windows.WindowsLookAndFeel
+
+# Standard Swing L&F classes:
+#LookAndFeel=com.sun.java.swing.plaf.windows.WindowsLookAndFeel
+#LookAndFeel=javax.swing.plaf.metal.MetalLookAndFeel
+
+# Allow view operations only, default = true if property removed
+ViewOnlyMode=false
+
+# Display auto refresh in seconds (also determines data collection frequency for charting)
+# Set to 0 to disable (also disables auto-reconnections and charting)
+DisplayRefresh=10
+
+# Display width
+DisplayWidth=1200
+
+# Display height
+DisplayHeight=600
+
+# For better efficiency, use these properties to reduce the number of destinations being monitored.
+# Only show queues that match given pattern. The pattern may contain the wildcards "*" and ">"  
+QueueNamePattern=>
+# Only show topics that match given pattern. The pattern may contain the wildcards "*" and ">"  
+TopicNamePattern=>
+
+# Only show destinations with permanence type (EMS4.4 or higher); 4=All,3=No Tempories,2=Dynamic,1=Static
+PermType=3
+
+# Comma separated list of views to hide (ACLs,Bridges,Channels,Clients,Connections,Consumers,Durables,Factories,Groups,Producers,Queues,Routes,Stores,Topics,Transactions,Transports,Users)
+HideViews=Clients
+
+# Show Totals on server monitor view
+ShowTotals=true
+
+# Show the path in the title bar
+ShowPathInTitleBar=true
+
+# When ShowPathInTitleBar is true determines if root node is shown or not
+ShowRootInTitleBar=true
+
+# Show extended message properties; JMSExpiration, JMSPriority
+ShowExtendedProperties=true
+
+# Highlight when there are pending messages for topics,queues and durables 
+ColourPendingMsgs=true
+
+# Message browser read delay in milliseconds
+MsgReadDelay=200
+
+# Message view order:
+ViewOldMessagesFirst=false
+
+# Maximum display size for bytes messages
+MaxDisplayBytes=1024
+
+# Debug on/off
+Debug=false
+
+# Sets the TCP connect timeout in milliseconds
+# If you are connecting to a remote EMS server you may need to increase this
+ConnectTimeout=500
+
+# Admin command timeout in milliseconds
+# If you are connecting to a remote EMS server you may need to increase this
+AdminTimeout=5000
+
+# Allow admin operations to standby server
+AllowStandbyOperations=false
+
+# Sets the SubStation timeout in milliseconds
+SSTimeout=5000
+
+# Sets default for use of sever timestamps for calculating response time in
+# Request/reply monitor. When false timestamps from original messages are used
+# ie timestamps as set by sending clients. When true timestamps from monitor
+# messages are used ie timestamps set be EMS server.
+UseServerTimestamps=false
+
+# Comma separated list of column widths on details panel (eg: TopicName:200,QueueName:250)
+DetailPanelColWidths=
+
+# DateTime format used for timestamp in server info logs
+LogDateTimeFormat=EEE MMM dd HH:mm:ss SSS zzz yyyy
+
+# Delimiter used as separator between values in CSV file output
+CSVFileDelimiter=,
+
+# Constantly retrieving 1000's of queues/topics can slow. Test carefully before increasing these values.
+# Alternatively use QueueNamePattern/TopicNamePattern to reduce the number of destinations being monitored.
+# Disables the main queues display when the EMS server reports more than this many queues
+MaxQueues=1000
+# Disables the main topics display when the EMS server reports more than this many topics
+MaxTopics=1000
+
+# Columns positions for server info display (eg AsyncDBSize:5,SyncDBSize:6)
+# Note; columns are moved to the specified position index, when specifying multiple columns previous columns may be moved from positions specified.
+# You cannot move the Alias column.
+ServerInfoColPositions=
